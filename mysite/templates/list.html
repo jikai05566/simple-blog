@@ -1,0 +1,28 @@
+<style>
+.content {font-size:12px;}
+</style>
+
+
+
+
+<h2>博客列表</h2>
+
+<a href="/add/">添加</a>
+
+
+
+
+  {% for article in articles %}
+
+  <div>
+	<h3>标题：<a href="/view/{{article.id}}">{{ article.title }}</a></h3>
+	<div class="content">
+		{{ article.content }}
+	</div>
+
+  </div>
+
+  <hr>
+
+  
+{% endfor %}
